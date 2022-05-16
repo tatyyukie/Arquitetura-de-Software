@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Calculadora {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -16,21 +17,11 @@ public class Calculadora {
         int op = s.nextInt();
 
         switch (op) {
-            case 1:
-                System.out.println("Resultado: " + new Adicao().calcular(valor1, valor2));
-                break;
-            case 2:
-                System.out.println("Resultado: " + new Subtracao().calcular(valor1, valor2));
-                break;
-            case 3:
-                System.out.println("Resultado: " + new Divisao().calcular(valor1, valor2));
-                break;
-            case 4:
-                System.out.println("Resultado: " + new Multiplicacao().calcular(valor1, valor2));
-                break;
-            default:
-                System.out.println("Opcao invalida!");
-                break;
+            case 1 -> System.out.println("Resultado: " + new Adicao().calcular(valor1, valor2));
+            case 2 -> System.out.println("Resultado: " + new Subtracao().calcular(valor1, valor2));
+            case 3 -> System.out.println("Resultado: " + new Divisao().calcular(valor1, valor2));
+            case 4 -> System.out.println("Resultado: " + new Multiplicacao().calcular(valor1, valor2));
+            default -> System.out.println("Opcao invalida!");
         }
         s.close();
     }
